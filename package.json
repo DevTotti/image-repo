@@ -1,0 +1,35 @@
+{
+  "name": "imagerepo",
+  "version": "1.0.0",
+  "description": "image repository",
+  "main": "app.js",
+  "scripts": {
+    "test": "img"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevTotti/image-repo.git"
+  },
+  "keywords": [
+    "imgrepo"
+  ],
+  "author": "DevTotti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevTotti/image-repo/issues"
+  },
+  "homepage": "https://github.com/DevTotti/image-repo#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.23.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.8",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "validator": "^13.5.2"
+  }
+}
