@@ -13,20 +13,16 @@ const app = express();
 
 
 const PORT = process.env.PORT;
-const MONGO_CLOUD_URI = process.env.MONGO_CLOUD_URI
-
+const MONGO_CLOUD_URI = process.env.MONGO_CLOUD_URI;
 
 
 // middlewares
-
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Database & server connection
-// app.listen(PORT);
-// console.log(`Listening to post ${PORT}`);
+
 
 mongoose.connect(MONGO_CLOUD_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => {
@@ -40,6 +36,7 @@ mongoose.connect(MONGO_CLOUD_URI, {useNewUrlParser: true, useUnifiedTopology: tr
     });
 
 
+    
 //image routes
 app.use('/', imageRoutes);
 

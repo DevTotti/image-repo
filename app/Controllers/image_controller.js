@@ -78,7 +78,49 @@ const uploadImages = (async (req, res) => {
 });
 
 
-const deleteImages = ((req, res) => {
+const deleteImages = ( async (req, res) => {
+    const username = req.name;
+    let imageId = [];
+
+    if (req.params.id){
+        imageId.push(req.params.id);
+    }
+    else {
+        imageId = req.body.Id;
+    }
+    try{
+
+        let processed = [];
+
+        let multiDelete = async (Id) => await Image.findOneAndDelete({ _id: Id, user: username });
+        for (imgId in imageId){
+            const Id = imageId[imgId];
+
+            const processing = await multiDelete(Id);
+            if (processing){
+                processed.push({
+                    deleted: true,
+                    imgId: Id
+                })
+            } else {
+                processed.push({
+                    deleted: false,
+                    imgId: Id
+                })
+            }
+        }
+        return res.json({
+            error: false,
+            message: 'image data deleted',
+            response: processed
+        });
+    } catch(err){
+        return res.json({
+            error: true,
+            message: 'an error occured!',
+            response: err
+        });
+    }
 
 });
 

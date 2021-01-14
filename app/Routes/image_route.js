@@ -37,6 +37,7 @@ const upload = multer({storage: storage, limits: {
 
 
 router.post('/upload', upload.array('images'),checkAuth, imageController.uploadImages);
+router.post('/delete', checkAuth, imageController.deleteImages);
 
 
 module.exports = router;
