@@ -36,4 +36,4 @@ Delete image(s) [POST]     | /delete            |{`token (from signin)`, `id:arr
 Delete single image [GET]     | /delete/:id        |params:`id` body: `token (from signin)`
 
 ## Author
-Paul Adediran
+Paul Adediran(DevTotti)
