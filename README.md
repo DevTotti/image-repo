@@ -30,8 +30,8 @@ Please make sure to update tests as appropriate.
 NAME     			     | END POINT            |  PARAMS / BODY DATA
 -------------------------| -------------        | ---------------
 User Signup [POST]    	 | /users/signup        |{`username`,`email`,`password`}
-User Signin [POST] 	     | /users/signin        |
-(Strictly for admin) Get all posted data with answers [GET] 	     | /admin           |
+User Signin [POST] 	     | /users/signin        |{`email`,`password`}
+Upload image(s) [POST]   | /upload              |formdata {`image(s)`, `token (from signin)`, `visibility (optional)(1 for public & 0 for private default set to 1)`}
 Get a single data [GET]     | /question/:id        |`id` e.g `ft-90`
 Add a data [POST]  	 | /question/       | {`question`,`options:{A, B, C, D}`,`answer`}
 Update a data [PUT] | /question/:id | repeat the same thing as POST
