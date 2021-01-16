@@ -21,3 +21,13 @@ to install all the modules in the ``` package.json ``` file.
 node app.js
 nodemon app.js
 ```
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Routes
+
+
+## Author
+Paul Adediran
