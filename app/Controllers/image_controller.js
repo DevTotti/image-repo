@@ -99,19 +99,19 @@ const deleteImages = ( async (req, res) => {
             const processing = await multiDelete(Id);
             if (processing){
                 processed.push({
+                    message: "image data deleted",
                     deleted: true,
                     imgId: Id
                 })
             } else {
                 processed.push({
+                    message: "image data not deleted",
                     deleted: false,
                     imgId: Id
                 })
             }
         }
         return res.json({
-            error: false,
-            message: 'image data deleted',
             response: processed
         });
     } catch(err){
