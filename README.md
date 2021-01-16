@@ -32,7 +32,7 @@ NAME     			     | END POINT            |  PARAMS / BODY DATA
 User Signup [POST]    	 | /users/signup        |{`username`,`email`,`password`}
 User Signin [POST] 	     | /users/signin        |{`email`,`password`}
 Upload image(s) [POST]   | /upload              |formdata {`image(s)`, `token (from signin)`, `visibility (optional)(1 for public & 0 for private default set to 1)`}
-Get a single data [GET]     | /question/:id        |`id` e.g `ft-90`
+Delete single image [GET]     | /delete/:id        |params:`id` body: `token (from signin)`
 Add a data [POST]  	 | /question/       | {`question`,`options:{A, B, C, D}`,`answer`}
 Update a data [PUT] | /question/:id | repeat the same thing as POST
 Delete a data [DELETE]| /question/:id |
