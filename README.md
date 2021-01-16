@@ -27,7 +27,16 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Routes
-
+NAME     			     | END POINT            |  PARAMS / BODY DATA
+-------------------------| -------------        | ---------------
+User Signup [POST]    	 | /users/signup        |{`username`,`email`,`password`}
+User Signin [POST] 	     | /users/signin        |
+(Strictly for admin) Get all posted data with answers [GET] 	     | /admin           |
+Get a single data [GET]     | /question/:id        |`id` e.g `ft-90`
+Add a data [POST]  	 | /question/       | {`question`,`options:{A, B, C, D}`,`answer`}
+Update a data [PUT] | /question/:id | repeat the same thing as POST
+Delete a data [DELETE]| /question/:id |
+Delete all data [DELETE]| /question |
 
 ## Author
 Paul Adediran
